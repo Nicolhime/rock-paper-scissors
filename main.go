@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	random "rockpaperscissors/random"
+)
 
 func main() {
 
@@ -10,4 +13,6 @@ func main() {
 
 	fmt.Scan(&i)
 	fmt.Println("value stored:", i)
+
+	random.Rng()
 }

@@ -1,18 +1,23 @@
-package rps
+package fight
 
 import (
 	"fmt"
-	random "rps/resources"
+	"math/rand"
 )
 
-func Fight(p1 string, p2 string) string { //under construction
-	User()
-	random.Computer()
+func Fight(p1 string, p2 string) string {
+	
+	switch expression {
+	case condition:
+		
+	}
+	fmt.Scan(&p1) //user gets to choose!
+	Computer() //computer gets to choose!
 
 	return
-} 
+}
 
-func User() string { //under construction
-	fmt.Scan(&i)
-	return i
+func Computer() string { 
+	rps := []string{"rock", "paper", "scissors"}
+	return (rps[rand.Intn(len(rps))]) //randomly chooses an option from the slice above and returns i
 }

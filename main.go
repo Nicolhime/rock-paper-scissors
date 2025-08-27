@@ -8,10 +8,10 @@ func main() {
 	var player string
 	fmt.Println("Welcome to Rock Paper Scissors!")
 	fmt.Println("Please input either 'rock', 'paper', or 'scissors'")
-	fmt.Scan(&player)                                 //stores player's input
-	playerHand := MapHand(player)                     //converts player's input to HandThrown type
-	computer := computer()                            //stores computer's input from "computer" function
-	fmt.Println(fight(playerHand, computer).String()) //sends both inputs to the "fight" function and prints the final result of the game
+	fmt.Scan(&player)                        //stores player's input
+	playerHand := MapHand(player)            //converts player's input to HandThrown type
+	computer := computer()                   //stores computer's input from "computer" function
+	fmt.Println(fight(playerHand, computer)) //sends both inputs to the "fight" function and prints the final result of the game
 }
 
 func computer() HandThrown {

@@ -1,6 +1,9 @@
 package main
 
-import "math/rand"
+import (
+	"math/rand"
+	"strings"
+)
 
 type HandThrown uint8
 
@@ -16,17 +19,18 @@ var handToString = map[HandThrown]string{
 	Scissors: "scissors",
 }
 
+func (h HandThrown) String() string {
+	return handToString[h]
+}
+
 func MapHand(s string) HandThrown {
+	s = strings.ToLower(s)
 	for k, v := range handToString {
 		if v == s {
 			return k
 		}
 	}
 	return HandThrown(255) // invalid value
-}
-
-func (h HandThrown) String() string {
-	return handToString[h]
 }
 
 func RandomHand() HandThrown {

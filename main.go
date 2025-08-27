@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"math/rand"
 )
 
@@ -45,6 +46,6 @@ func fight(player string, computer string) string {
 		fmt.Println("Player chose:", player, ",", "Computer chose:", computer)
 		output = "Player Wins!"
 	}
-
+  
 	return output
 }
